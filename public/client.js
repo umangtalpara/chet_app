@@ -13,13 +13,26 @@ textarea.addEventListener('keyup', (e) => {
     }
 })
 
-function sendMessage(msg){
+function sendMessage(message){
     let msg ={
         user:name,
-        message:msg
+        message:message
     }
     //append
     appendMessage(msg, 'outgoing')
 }
 
-function appendMessage()
+function appendMessage(msg, type) {
+    let mainDiv = document.createElement('div')
+    let className = type
+    mainDiv.classList.add(className, 'message')
+
+    let markup = `
+        <h4>${msg.user}</h4>
+        <p>${msg.message}</p>
+    `
+    mainDiv.innerHTML = markup
+    messageArea.appendChild(mainDiv)
+}
+
+
