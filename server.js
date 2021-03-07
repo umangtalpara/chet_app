@@ -1,24 +1,26 @@
-const { Socket } = require('dgram')
 const express = require('express')
-const app= express()
+const app = express()
 const http = require('http').createServer(app)
 
 const PORT = process.env.PORT || 3000
 
-http.listen (PORT ,() =>{
-    console.log('listening on port ${PORT}')
+http.listen(PORT, () => {
+    console.log(`Listening on port ${PORT}`)
 })
 
 app.use(express.static(__dirname + '/public'))
 
-app.get('/', (req,res)=>{
-    res.sendFile(__dirname +'/index.html')
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/index.html')
 })
 
-// socket
+// Socket 
+const io = require('socket.io')(http)
 
-const io =require(Socket.io)(http)
+io.on('connection', (socket) => {
+    console.log('Connected...')
+    socket.on('message', (msg) => {
+        socket.broadcast.emit('message', msg)
+    })
 
-io.on('connection',(Socket)=>{
-    console.log('connected..')
 })
