@@ -4,5 +4,5 @@
 //go chet app folder
 > cd chat_app
 
-//enter code start npm
+//enter code for start npm
 > npm start
