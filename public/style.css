@@ -61,14 +61,14 @@ textarea {
   color: #fff;
 }
 .outgoing {
-  background: #787986;
-  color: #fff;
+  background: #e9eafd;
+  color: #787986;
   margin-left: auto;
 }
 .message h4 {
   position: absolute;
   top: -20px;
-  right: 0;
+  left: 0;
   color: #333;
   font-size: 14px;
 }
