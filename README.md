@@ -5,3 +5,8 @@
 - `cd chat_app`
 - `npm i`
 - `npm start`
+
+
+open browser::
+
+http://localhost:8000
