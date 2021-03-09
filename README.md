@@ -1,14 +1,7 @@
 # chet_app
 
 
-//go chet app folder
-> cd chat_app
-
-//enter code for start npm
-> npm start
-
-
-- `git clone https://github.com/umangtalpara/netflix_.git`
+- `git clone https://github.com/umangtalpara/chet_app.git`
 - `cd chat_app`
 - `npm i`
 - `npm start`
