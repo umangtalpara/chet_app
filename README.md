@@ -3,7 +3,7 @@
 
 - `git clone https://github.com/umangtalpara/chet_app.git`
 - `cd chat_app`
-- `npm i`
+- `npm install`
 - `npm start`
 
 
